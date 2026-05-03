@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Need Cash — Instant Loans for Everyone</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <img src="assets/logo.png" alt="Need Cash Logo">
+    </div>
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#eligibility">Eligibility</a>
+      <a href="#" class="nav-cta" onclick="window.open('https://example.com/apply','_blank')">Apply Now</a>
+    </div>
+    <button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').classList.add('open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="4" y1="7" x2="20" y2="7" />
+        <line x1="4" y1="12" x2="20" y2="12" />
+        <line x1="4" y1="17" x2="20" y2="17" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="mobile-nav-inner">
+      <button class="mobile-close" onclick="document.getElementById('mobileNav').classList.remove('open')">✕</button>
+      <a href="#products" onclick="document.getElementById('mobileNav').classList.remove('open')">Products</a>
+      <a href="#calculator" onclick="document.getElementById('mobileNav').classList.remove('open')">Calculator</a>
+      <a href="#how-it-works" onclick="document.getElementById('mobileNav').classList.remove('open')">How It Works</a>
+      <a href="#eligibility" onclick="document.getElementById('mobileNav').classList.remove('open')">Eligibility</a>
+      <a href="#" class="nav-cta" onclick="window.open('https://example.com/apply','_blank')">Apply Now</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="hero-inner">
+      <div class="reveal">
+        <h1>Instant Loans for <span class="highlight">Salaried</span> &amp; <span class="highlight">Self-Employed</span>
+        </h1>
+        <p>Personal loans and instant credit for salaried professionals, self-employed individuals, and business owners.
+          Fast approval. Minimal paperwork. No collateral.</p>
+        <div class="hero-btns">
+          <a href="#" class="btn-primary" onclick="window.open('https://example.com/apply','_blank')">
+            Apply Now
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#calculator" class="btn-secondary">Check Eligibility</a>
+        </div>
+        <div class="trust-strip">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            RBI Registered NBFC
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+            100% Digital Process
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 00-3-3.87" />
+              <path d="M16 3.13a4 4 0 010 7.75" />
+            </svg>
+            Trusted by Thousands
+          </div>
+        </div>
+      </div>
+      <!-- MASCOT — Hero -->
+      <div class="reveal reveal-delay-2">
+        <div class="mascot-hero">
+          <img src="assets/mascot.png" alt="Need Cash Mascot — Mr. Neeco">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item"><span class="marquee-dot"></span>Quick Approval</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Same-Day Disbursal</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>No Collateral</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Minimal Documentation</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>RBI Compliant</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>100% Digital</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Quick Approval</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Same-Day Disbursal</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>No Collateral</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Minimal Documentation</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>RBI Compliant</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>100% Digital</div>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section>
+    <div class="section-inner">
+      <div class="section-tag">The Problem</div>
+      <h2 class="section-title reveal">Cash Flow Issues Don't Care <span class="highlight">How You Earn</span></h2>
+      <p class="section-sub reveal">Whether you're salaried, running a business, or freelancing — unexpected expenses
+        hit everyone.</p>
+      <div class="problem-grid">
+        <div class="problem-card reveal">
+          <div style="display:flex;align-items:flex-start;gap:16px;">
+            <div>
+              <h3>The Problems You Face</h3>
+              <ul class="pain-list">
+                <li><span class="pain-dot red"></span>Salary delays leaving you short</li>
+                <li><span class="pain-dot red"></span>Business cash flow gaps</li>
+                <li><span class="pain-dot red"></span>Emergency expenses out of nowhere</li>
+                <li><span class="pain-dot amber"></span>Seasonal income fluctuations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="problem-card solution-card reveal reveal-delay-1">
+          <h3>Traditional Loans? Same Story.</h3>
+          <ul class="pain-list">
+            <li><span class="pain-dot"></span>Painfully slow approvals</li>
+            <li><span class="pain-dot"></span>Endless paperwork &amp; red tape</li>
+            <li><span class="pain-dot"></span>Rejections if your profile isn't "perfect"</li>
+          </ul>
+          <p class="solution-punchline">We built a smarter way to access money — for everyone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="bg-green">
+    <div class="section-inner">
+      <div class="section-tag">Our Products</div>
+      <h2 class="section-title reveal">Loans Designed for <span class="highlight">Every Earner</span></h2>
+      <p class="section-sub reveal">No matter how you earn, access fast and flexible loans tailored to your needs.</p>
+      <div class="product-cards">
+        <div class="product-card reveal">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <h3>For Salaried</h3>
+          <p>Quick funds when your paycheck can't wait.</p>
+          <ul class="product-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Instant salary advances</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Short-term personal loans</li>
+          </ul>
+        </div>
+        <div class="product-card reveal reveal-delay-1" style="border-color: rgba(48,159,72,0.2);">
+          <div class="product-icon"
+            style="background: linear-gradient(135deg, var(--green-primary), var(--green-cta));">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <h3>For Self-Employed</h3>
+          <p>Flexible funding for freelancers &amp; professionals.</p>
+          <ul class="product-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Flexible personal loans</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Income-based approvals</li>
+          </ul>
+        </div>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <h3>For Business Owners</h3>
+          <p>Keep your business moving with working capital.</p>
+          <ul class="product-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Quick working capital</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Short-term business loans</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES -->
+  <section>
+    <div class="section-inner">
+      <div style="text-align:center;">
+        <div class="section-tag" style="display:inline-flex;">Key Features</div>
+      </div>
+      <h2 class="section-title reveal" style="text-align:center;">Everything You Need, <span class="highlight">Nothing
+          You Don't</span></h2>
+      <p class="section-sub center reveal">Transparent, fast, and built for real people.</p>
+      <div class="features-grid">
+        <div class="feature-item reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+            </svg></div>
+          <h4>₹5,000 to ₹5 Lakhs</h4>
+          <p>Borrow what you need</p>
+        </div>
+        <div class="feature-item reveal reveal-delay-1">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg></div>
+          <h4>Same-Day Disbursal</h4>
+          <p>Funds in your account fast</p>
+        </div>
+        <div class="feature-item reveal reveal-delay-2">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0110 0v4" />
+              <circle cx="12" cy="16" r="1" />
+            </svg></div>
+          <h4>No Collateral</h4>
+          <p>Completely unsecured</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+            </svg></div>
+          <h4>Minimal Docs</h4>
+          <p>Just the basics needed</p>
+        </div>
+        <div class="feature-item reveal reveal-delay-1">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 4 23 10 17 10" />
+              <path d="M20.49 15a9 9 0 11-2.12-9.36L23 10" />
+            </svg></div>
+          <h4>Flexible Repayment</h4>
+          <p>Choose what works for you</p>
+        </div>
+        <div class="feature-item reveal reveal-delay-2">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg></div>
+          <h4>Transparent Charges</h4>
+          <p>No hidden fees, ever</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="bg-green">
+    <div class="section-inner">
+      <div style="text-align:center;">
+        <div class="section-tag" style="display:inline-flex;">How It Works</div>
+      </div>
+      <h2 class="section-title reveal" style="text-align:center;">Simple. Fast. <span class="highlight">100%
+          Online.</span></h2>
+      <p class="section-sub center reveal">Get your loan in three easy steps.</p>
+      <div class="steps-container">
+        <div class="steps-line"></div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-num">1</div>
+            <h3>Apply Online</h3>
+            <p>Enter your basic details — takes under 5 minutes.</p>
+          </div>
+          <div class="step reveal reveal-delay-1">
+            <div class="step-num">2</div>
+            <h3>Get Approved</h3>
+            <p>Quick eligibility check with instant decision.</p>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <div class="step-num">3</div>
+            <h3>Receive Funds</h3>
+            <p>Money transferred directly to your bank account.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calculator" class="calc-section">
+    <div class="section-inner">
+      <div style="text-align:center;">
+        <div class="section-tag" style="display:inline-flex;">Calculator</div>
+      </div>
+      <h2 class="section-title reveal" style="text-align:center;">Personal Loan <span
+          class="highlight">Calculator</span></h2>
+      <p class="section-sub center reveal">Calculate your loan amount, term, and interest rate to see your estimated
+        monthly payment.</p>
+      <div class="calc-layout">
+        <div>
+          <div class="calc-card reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="2" width="16" height="20" rx="2" />
+                <line x1="8" y1="6" x2="16" y2="6" />
+                <line x1="8" y1="10" x2="10" y2="10" />
+                <line x1="14" y1="10" x2="16" y2="10" />
+                <line x1="8" y1="14" x2="10" y2="14" />
+                <line x1="14" y1="14" x2="16" y2="14" />
+                <line x1="8" y1="18" x2="16" y2="18" />
+              </svg>
+              Loan Calculator
+            </h3>
+            <div class="slider-group">
+              <div class="slider-label"><span>Loan Amount</span><strong id="loanAmtLabel">₹10,000</strong></div>
+              <input type="range" id="loanAmt" min="5000" max="500000" step="1000" value="10000">
+              <div class="slider-range"><span>₹5,000</span><span>₹5,00,000</span></div>
+            </div>
+            <div class="slider-group">
+              <div class="slider-label"><span>Loan Term</span><strong id="loanTermLabel">3 months</strong></div>
+              <input type="range" id="loanTerm" min="3" max="36" step="1" value="3">
+              <div class="slider-range"><span>3 Months</span><span>36 Months</span></div>
+            </div>
+            <div class="slider-group">
+              <div class="slider-label"><span>Interest Rate</span><strong id="loanRateLabel">12% (per annum)</strong>
+              </div>
+              <input type="range" id="loanRate" min="12" max="36" step="0.5" value="12">
+              <div class="slider-range"><span>12% (per annum)</span><span>36% (per annum)</span></div>
+            </div>
+          </div>
+          <div class="summary-card reveal reveal-delay-1">
+            <h3>Loan Summary</h3>
+            <div class="emi-display">
+              <small>Monthly EMI</small>
+              <div class="emi-value"><span class="rupee">₹</span> <span id="emiValue">3,400</span></div>
+            </div>
+            <div class="summary-row">
+              <div class="summary-box"><small>Total Repayment</small><strong id="totalRepay">₹ 10,201</strong></div>
+              <div class="summary-box"><small>Total Interest</small><strong id="totalInterest">₹ 201</strong></div>
+            </div>
+            <button class="apply-btn-full" onclick="window.open('https://example.com/apply','_blank')">
+              Apply Now
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="benefits-sidebar">
+          <div class="benefits-card reveal reveal-delay-2">
+            <h4>Loan Benefits</h4>
+            <ul class="benefits-list">
+              <li>
+                <div class="benefit-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>Quick approval process
+              </li>
+              <li>
+                <div class="benefit-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>Same-day disbursals
+              </li>
+              <li>
+                <div class="benefit-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>Minimal documentation
+              </li>
+              <li>
+                <div class="benefit-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>Flexible repayment options
+              </li>
+              <li>
+                <div class="benefit-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>No hidden charges
+              </li>
+            </ul>
+          </div>
+          <div class="benefits-card help-card reveal reveal-delay-3">
+            <div>
+              <h4>Need Help?</h4>
+              <p>Our financial experts are ready to assist you with your loan application.</p>
+              <a href="#" class="help-link">
+                Contact Support
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="bg-green">
+    <div class="section-inner">
+      <div class="section-tag">Why Us</div>
+      <h2 class="section-title reveal">Why We're <span class="highlight">Different</span></h2>
+      <p class="section-sub reveal">Access to money shouldn't depend on how you earn.</p>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 00-3-3.87" />
+              <path d="M16 3.13a4 4 0 010 7.75" />
+            </svg></div>
+          <div>
+            <h4>Works for All Profiles</h4>
+            <p>Salaried, self-employed, freelancers — everyone qualifies.</p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-1">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg></div>
+          <div>
+            <h4>Faster Than Banks</h4>
+            <p>No branch visits, no queues. Get funds same day.</p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-2">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg></div>
+          <div>
+            <h4>Higher Approval Rate</h4>
+            <p>Smart algorithms approve more applications.</p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-3">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0110 0v4" />
+            </svg></div>
+          <div>
+            <h4>Secure &amp; RBI-Compliant</h4>
+            <p>Encrypted data, full regulatory compliance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="why-punch reveal">
+        <div class="why-punch-text">Because access to money shouldn't depend on how you earn.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELIGIBILITY -->
+  <section id="eligibility">
+    <div class="section-inner">
+      <div style="text-align:center;">
+        <div class="section-tag" style="display:inline-flex;">Eligibility</div>
+      </div>
+      <h2 class="section-title reveal" style="text-align:center;">Who Can <span class="highlight">Apply?</span></h2>
+      <p class="section-sub center reveal">Simple criteria — if you earn, you qualify.</p>
+      <div class="elig-grid">
+        <div class="elig-card reveal">
+          <h3>Eligible Profiles</h3>
+          <ul class="elig-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Salaried Employees</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Self-Employed Professionals</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Freelancers &amp; Gig Workers</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Business Owners</li>
+          </ul>
+        </div>
+        <div class="elig-card reveal reveal-delay-1">
+          <h3>Basic Requirements</h3>
+          <ul class="elig-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Age: 21–60 years</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Stable income source (any type)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Active bank account</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>PAN &amp; Aadhaar Card</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="final-cta-inner reveal">
+      <h2>Need Money? Don't Overthink It.</h2>
+      <p>Apply in minutes. Get funds quickly. No matter how you earn.</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;">
+        <a href="#" class="btn-white" onclick="window.open('https://example.com/apply','_blank')">
+          Apply Now
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <img src="assets/logo.png" alt="Need Cash Logo">
+          </div>
+          <p style="max-width:280px;margin-top:8px;">Simple, reliable financial support through a seamless digital
+            experience. Built for when it matters most.</p>
+        </div>
+        <div>
+          <h5>Products</h5>
+          <ul class="footer-links">
+            <li><a href="#">Personal Loan</a></li>
+            <li><a href="#">Salary Advance</a></li>
+            <li><a href="#">Business Loan</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Legal</h5>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Grievance Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Need Cash. All rights reserved. RBI Registered NBFC.</span>
+        <span style="color:rgba(255,255,255,0.3);">Built with care</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
