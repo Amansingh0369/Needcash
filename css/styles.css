@@ -597,8 +597,8 @@ section {
 
 .moments-header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 340px;
-  gap: 36px;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 48px;
   align-items: center;
   margin-bottom: 34px;
 }
@@ -608,8 +608,8 @@ section {
 }
 
 .moments-hero-mascot {
-  justify-self: end;
-  width: min(340px, 100%);
+  justify-self: start;
+  width: min(250px, 100%);
   position: relative;
 }
 
