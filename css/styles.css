@@ -729,14 +729,14 @@ section {
   animation-delay: .8s;
 }
 
-/* PRODUCTS */
-.product-cards {
+/* SERVICES */
+.service-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.product-card {
+.service-card {
   background: var(--white);
   border-radius: var(--radius);
   padding: 36px;
@@ -746,7 +746,7 @@ section {
   overflow: hidden;
 }
 
-.product-card::before {
+.service-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -758,16 +758,16 @@ section {
   transition: opacity .3s;
 }
 
-.product-card:hover {
+.service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
 }
 
-.product-card:hover::before {
+.service-card:hover::before {
   opacity: 1;
 }
 
-.product-icon {
+.service-icon {
   width: 52px;
   height: 52px;
   border-radius: 14px;
@@ -778,31 +778,31 @@ section {
   margin-bottom: 20px;
 }
 
-.product-icon svg {
+.service-icon svg {
   width: 24px;
   height: 24px;
   color: var(--green-primary);
 }
 
-.product-card h3 {
+.service-card h3 {
   font-size: 19px;
   margin-bottom: 8px;
 }
 
-.product-card>p {
+.service-card>p {
   font-size: 14px;
   color: #777;
   margin-bottom: 20px;
 }
 
-.product-features {
+.service-features {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.product-features li {
+.service-features li {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -810,7 +810,7 @@ section {
   font-weight: 500;
 }
 
-.product-features li svg {
+.service-features li svg {
   width: 18px;
   height: 18px;
   color: var(--green-cta);
@@ -1789,7 +1789,7 @@ footer h5 {
   }
 
   .problem-grid,
-  .product-cards,
+  .service-cards,
   .steps,
   .calc-layout,
   .moments-header,
