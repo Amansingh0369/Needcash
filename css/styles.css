@@ -1270,7 +1270,7 @@ input[type="range"]:active::-webkit-slider-thumb {
   height: 16px;
 }
 
-/* WHY US */
+/* WHY NeedCash? */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
