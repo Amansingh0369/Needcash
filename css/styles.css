@@ -1482,7 +1482,7 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
   gap: 40px;
   margin-bottom: 48px;
 }
@@ -1523,7 +1523,7 @@ footer h5 {
 }
 
 .footer-links a:hover {
-  color: var(--accent);
+  color: #ffffff;
 }
 
 .footer-bottom {

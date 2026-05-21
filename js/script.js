@@ -24,7 +24,6 @@ revealEls.forEach(el => revealObserver.observe(el));
 // Calculator
 const loanAmt  = document.getElementById('loanAmt');
 const loanTerm = document.getElementById('loanTerm');
-const loanRate = document.getElementById('loanRate');
 
 function formatINR(n) {
   return n.toLocaleString('en-IN');
@@ -32,35 +31,30 @@ function formatINR(n) {
 
 function updateCalc() {
   const P = parseInt(loanAmt.value);
-  const N = parseInt(loanTerm.value);
-  const annualRate = parseFloat(loanRate.value);
-  const R = annualRate / 12 / 100;
+  const D = parseInt(loanTerm.value);
+  
+  const totalRepay = P;
 
   document.getElementById('loanAmtLabel').textContent  = '₹' + formatINR(P);
-  document.getElementById('loanTermLabel').textContent = N + ' months';
-  document.getElementById('loanRateLabel').textContent = annualRate + '% (per annum)';
+  document.getElementById('loanTermLabel').textContent = D + ' days';
 
-  let emi;
-  if (R === 0) {
-    emi = P / N;
-  } else {
-    emi = P * R * Math.pow(1 + R, N) / (Math.pow(1 + R, N) - 1);
-  }
-  const totalRepay    = emi * N;
-  const totalInterest = totalRepay - P;
+  // Calculate Repayment Date (Today + D days)
+  const repayDate = new Date();
+  repayDate.setDate(repayDate.getDate() + D);
+  const options = { day: 'numeric', month: 'short', year: 'numeric' };
+  const dateString = repayDate.toLocaleDateString('en-IN', options);
 
-  // Animate EMI value
-  const emiEl = document.getElementById('emiValue');
-  emiEl.style.transform  = 'scale(1.05)';
-  emiEl.style.transition = 'transform .15s';
-  setTimeout(() => { emiEl.style.transform = 'scale(1)'; }, 150);
+  // Animate total repayment value
+  const totalRepayEl = document.getElementById('totalRepayValue');
+  totalRepayEl.style.transform  = 'scale(1.05)';
+  totalRepayEl.style.transition = 'transform .15s';
+  setTimeout(() => { totalRepayEl.style.transform = 'scale(1)'; }, 150);
 
-  emiEl.textContent = formatINR(Math.round(emi));
-  document.getElementById('totalRepay').textContent    = '₹ ' + formatINR(Math.round(totalRepay));
-  document.getElementById('totalInterest').textContent = '₹ ' + formatINR(Math.round(totalInterest));
+  totalRepayEl.textContent = formatINR(Math.round(totalRepay));
+  document.getElementById('repayDate').textContent = dateString;
 
   // Update slider track fill
-  [loanAmt, loanTerm, loanRate].forEach(s => {
+  [loanAmt, loanTerm].forEach(s => {
     const pct = (s.value - s.min) / (s.max - s.min) * 100;
     s.style.background = `linear-gradient(90deg, #309f48 ${pct}%, #e8e8e8 ${pct}%)`;
   });
@@ -68,5 +62,4 @@ function updateCalc() {
 
 loanAmt.addEventListener('input',  updateCalc);
 loanTerm.addEventListener('input', updateCalc);
-loanRate.addEventListener('input', updateCalc);
 updateCalc();

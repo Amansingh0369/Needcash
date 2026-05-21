@@ -290,8 +290,8 @@
       </div>
       <h2 class="section-title reveal" style="text-align:center;">Personal Loan <span
           class="highlight">Calculator</span></h2>
-      <p class="section-sub center reveal">Calculate your loan amount, term, and interest rate to see your estimated
-        monthly payment.</p>
+      <p class="section-sub center reveal">Calculate your loan amount and term to see your estimated total repayment.
+      </p>
       <div class="calc-layout">
         <div>
           <div class="calc-card reveal">
@@ -309,30 +309,23 @@
             </h3>
             <div class="slider-group">
               <div class="slider-label"><span>Loan Amount</span><strong id="loanAmtLabel">₹10,000</strong></div>
-              <input type="range" id="loanAmt" min="5000" max="25000" step="1000" value="10000">
-              <div class="slider-range"><span>₹5,000</span><span>₹25,000</span></div>
+              <input type="range" id="loanAmt" min="2500" max="25000" step="500" value="10000">
+              <div class="slider-range"><span>₹2,500</span><span>₹25,000</span></div>
             </div>
             <div class="slider-group">
-              <div class="slider-label"><span>Loan Term</span><strong id="loanTermLabel">3 months</strong></div>
-              <input type="range" id="loanTerm" min="3" max="36" step="1" value="3">
-              <div class="slider-range"><span>3 Months</span><span>36 Months</span></div>
-            </div>
-            <div class="slider-group">
-              <div class="slider-label"><span>Interest Rate</span><strong id="loanRateLabel">12% (per annum)</strong>
-              </div>
-              <input type="range" id="loanRate" min="12" max="36" step="0.5" value="12">
-              <div class="slider-range"><span>12% (per annum)</span><span>36% (per annum)</span></div>
+              <div class="slider-label"><span>Repayment Term</span><strong id="loanTermLabel">10 days</strong></div>
+              <input type="range" id="loanTerm" min="10" max="14" step="1" value="10">
+              <div class="slider-range"><span>10 Days</span><span>14 Days</span></div>
             </div>
           </div>
           <div class="summary-card reveal reveal-delay-1">
             <h3>Loan Summary</h3>
             <div class="emi-display">
-              <small>Monthly EMI</small>
-              <div class="emi-value"><span class="rupee">₹</span> <span id="emiValue">3,400</span></div>
+              <small>Total Repayment</small>
+              <div class="emi-value"><span class="rupee">₹</span> <span id="totalRepayValue">--</span></div>
             </div>
-            <div class="summary-row">
-              <div class="summary-box"><small>Total Repayment</small><strong id="totalRepay">₹ 10,201</strong></div>
-              <div class="summary-box"><small>Total Interest</small><strong id="totalInterest">₹ 201</strong></div>
+            <div class="summary-row" style="grid-template-columns: 1fr;">
+              <div class="summary-box"><small>Repayment Date</small><strong id="repayDate">--</strong></div>
             </div>
             <button class="apply-btn-full"
               onclick="window.open('https://needcash.roopya.money/customer/personal_loan/31fad453ab90e0a89a24fa5a37dcfbb598eeed90bef21fc72efa595c70f8d1ec/8666fa8950b537087a086c2c11e4c56eccdf26727af4d01415cc27cf02b1e642','_blank')">
@@ -386,7 +379,7 @@
             <div>
               <h4>Need Help?</h4>
               <p>Our financial experts are ready to assist you with your loan application.</p>
-              <a href="#" class="help-link">
+              <a href="#contact-info" class="help-link">
                 Contact Support
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <path d="M5 12h14M12 5l7 7-7 7" />
@@ -665,9 +658,8 @@
         <div>
           <h5>Company</h5>
           <ul class="footer-links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><a href="#how-it-works">About Us</a></li>
+            <li><a href="#contact-info">Contact</a></li>
           </ul>
         </div>
         <div>
@@ -676,6 +668,18 @@
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms & Conditions</a></li>
           </ul>
+        </div>
+        <div id="contact-info">
+          <h5>Contact Us</h5>
+          <p style="margin-top: 8px;">
+            101 IJS, X/320, Delhi Gate Bazar,<br>Asaf Ali Road, New Delhi- 110002
+          </p>
+          <p style="margin-top: 8px;">
+            <strong>Tel:</strong> <a href="tel:+911146577332" style="color: inherit; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='inherit'">+91- 11- 4657 7332</a>
+          </p>
+          <p style="margin-top: 4px;">
+            <strong>Email:</strong> <a href="mailto:info@mountshikhar.com" style="color: inherit; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='inherit'">info@mountshikhar.com</a>
+          </p>
         </div>
       </div>
       <div class="footer-bottom">
