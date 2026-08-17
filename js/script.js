@@ -1,3 +1,10 @@
+// Credits
+console.log(
+  '%c This website is made by Aman Singh ',
+  'background:#309f48;color:#fff;font-size:14px;font-weight:bold;padding:6px 10px;border-radius:4px;'
+);
+console.log('For contact, email me on singh0369aman@gmail.com');
+
 // Nav scroll effect
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
@@ -60,6 +67,9 @@ function updateCalc() {
   });
 }
 
-loanAmt.addEventListener('input',  updateCalc);
-loanTerm.addEventListener('input', updateCalc);
-updateCalc();
+// Calculator only exists on the home page
+if (loanAmt && loanTerm) {
+  loanAmt.addEventListener('input',  updateCalc);
+  loanTerm.addEventListener('input', updateCalc);
+  updateCalc();
+}
