@@ -22,6 +22,7 @@ if (repayWidget) {
   const payBtn = document.getElementById('repayPayBtn');
   const payError = document.getElementById('repayPayError');
   const backBtn = document.getElementById('repayBackBtn');
+  const payReady = document.getElementById('repayReady');
 
   const PAN_RE = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
   let loans = [];
@@ -254,7 +255,20 @@ if (repayWidget) {
 
       const url = res.data && (res.data.payUrl || res.data.short_url);
       if (!url) throw new Error('Could not start the payment. Please try again.');
-      window.location.href = url;
+
+      // Log the link id so a failed Easebuzz page can be traced back to a payment.
+      console.log('[repay] payment link', res.data.link_id, url);
+
+      // Easebuzz occasionally serves "Could Not Load Payment Page" when a link is
+      // opened the instant it is created, so give it a moment and always leave a
+      // clickable link in case the automatic redirect lands badly.
+      payReady.querySelector('.repay-ready-amt').textContent = inr(loan.amount);
+      const link = payReady.querySelector('.repay-ready-link');
+      link.href = url;
+      loansStep.hidden = true;
+      payReady.hidden = false;
+      setTimeout(() => { window.location.href = url; }, 1200);
+      return;
     } catch (err) {
       showMsg(payError, err.message);
       setBusy(payBtn, false, 'Pay ' + inr(loan.amount));
@@ -267,6 +281,7 @@ if (repayWidget) {
   payBtn.addEventListener('click', handlePay);
   backBtn.addEventListener('click', () => {
     loansStep.hidden = true;
+    payReady.hidden = true;
     panStep.hidden = false;
     showMsg(payError, '');
     panInput.focus();

@@ -2330,3 +2330,13 @@ footer h5 {
     font-size: 20px;
   }
 }
+
+.repay-ready-link {
+  text-decoration: none;
+  justify-content: center;
+}
+
+.repay-ready-amt {
+  color: var(--green-primary);
+  white-space: nowrap;
+}
