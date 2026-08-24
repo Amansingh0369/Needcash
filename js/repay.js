@@ -62,10 +62,12 @@ if (repayWidget) {
   async function callApi(path, payload) {
     let res;
     try {
+      const body = JSON.stringify({ auth_key: REPAY_CFG.authKey, api_code: REPAY_CFG.apiCode, ...payload });
+      console.log('[repay] ->', path, body);
       res = await fetch(REPAY_CFG.base + '/' + path, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'domain_name': REPAY_CFG.domain },
-        body: JSON.stringify({ auth_key: REPAY_CFG.authKey, api_code: REPAY_CFG.apiCode, ...payload })
+        body: body
       });
     } catch (e) {
       throw new Error('Could not reach the payment server. Check your connection and try again.');
@@ -76,6 +78,7 @@ if (repayWidget) {
     if (!res.ok || json.status === false) {
       throw new Error(json.message || 'Something went wrong. Please try again.');
     }
+    console.log('[repay] <-', path, json);
     return json;
   }
 
@@ -116,7 +119,8 @@ if (repayWidget) {
 
     return {
       raw,
-      amount,
+      // Easebuzz rejects amounts with more than two decimal places.
+      amount: Math.round(amount * 100) / 100,
       principal,
       overdue,
       active,
