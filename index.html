@@ -625,12 +625,55 @@
             <h2 class="section-title">Hassle-Free <span class="highlight">Repayments</span></h2>
             <img src="assets/3.png" alt="Need Cash repayment mascot">
           </div>
-          <p>Scan the QR code or use the button for quick and secure loan repayments. We support all major UPI apps and
-            bank transfers.</p>
+          <p>Enter your PAN to see your outstanding loans and repay in seconds. We support all major UPI apps,
+            cards, and net banking.</p>
         </div>
         <div class="pay-now-image">
-          <div class="pay-qr-container">
-            <img src="assets/QR_Code.png" alt="Payment QR Code">
+          <div class="repay-widget" id="repayWidget">
+
+            <!-- STEP 1 — PAN -->
+            <div id="repayStepPan">
+              <h3>Pay Your Loan</h3>
+              <p class="repay-hint">Enter your PAN number to view your loans and pay securely.</p>
+              <label class="repay-label" for="repayPan">PAN Number</label>
+              <input type="text" id="repayPan" class="repay-input" placeholder="ABCDE1234F" maxlength="10"
+                autocomplete="off" autocapitalize="characters" spellcheck="false">
+              <div class="repay-error" id="repayPanError" hidden></div>
+              <button type="button" class="repay-btn" id="repayFetchBtn">
+                <span class="repay-btn-label">Fetch My Loans</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- STEP 2 — LOANS -->
+            <div id="repayStepLoans" hidden>
+              <button type="button" class="repay-back" id="repayBackBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Use a different PAN
+              </button>
+              <h3>Your Loans</h3>
+              <p class="repay-loans-note" id="repayLoansNote" hidden></p>
+              <div class="repay-loan-list" id="repayLoanList"></div>
+              <div class="repay-error" id="repayPayError" hidden></div>
+              <button type="button" class="repay-btn" id="repayPayBtn" disabled>
+                <span class="repay-btn-label">Proceed to Pay</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="repay-secure">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0110 0v4" />
+              </svg>
+              Secure payments powered by Easebuzz
+            </div>
           </div>
         </div>
       </div>
@@ -698,6 +741,7 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/repay.js"></script>
 </body>
 
 </html>

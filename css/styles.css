@@ -2012,3 +2012,321 @@ footer h5 {
   border-radius: 50%;
   background: var(--green-light);
 }
+
+/* ===== REPAYMENT WIDGET ===== */
+.repay-widget {
+  background: var(--white);
+  padding: 32px;
+  border-radius: 32px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(48, 159, 72, 0.1);
+  text-align: left;
+}
+
+.repay-widget h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.repay-hint {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.repay-label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.repay-input {
+  width: 100%;
+  padding: 15px 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text);
+  background: var(--bg-cream);
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.repay-input::placeholder {
+  color: #b0b0b0;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+.repay-input:focus {
+  border-color: var(--green-primary);
+  box-shadow: 0 0 0 4px rgba(48, 159, 72, 0.12);
+}
+
+.repay-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 18px;
+  padding: 16px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--green-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background .2s, transform .2s, box-shadow .2s;
+}
+
+.repay-btn:hover:not(:disabled) {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(48, 159, 72, 0.25);
+}
+
+.repay-btn:disabled {
+  background: #c8d3cb;
+  cursor: not-allowed;
+}
+
+.repay-btn.is-busy {
+  cursor: progress;
+}
+
+.repay-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.repay-btn.is-busy svg {
+  display: none;
+}
+
+.repay-error {
+  margin-top: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #a1231d;
+  background: #fdeceb;
+  border: 1px solid #f5c6c2;
+  border-radius: var(--radius-sm);
+}
+
+/* --- loan list --- */
+.repay-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.repay-back:hover {
+  color: var(--green-dark);
+}
+
+.repay-back svg {
+  width: 15px;
+  height: 15px;
+}
+
+.repay-loans-note {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.repay-loan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.repay-loan {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-cream);
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+
+.repay-loan:hover:not(.is-inactive) {
+  border-color: rgba(48, 159, 72, 0.4);
+}
+
+.repay-loan.is-picked {
+  border-color: var(--green-primary);
+  background: rgba(48, 159, 72, 0.06);
+}
+
+.repay-loan.is-inactive {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.repay-loan input {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--green-primary);
+  flex-shrink: 0;
+  cursor: inherit;
+}
+
+.repay-loan-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.repay-loan-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.repay-loan-ref {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.repay-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.repay-badge.is-active {
+  color: #14722a;
+  background: rgba(48, 159, 72, 0.14);
+}
+
+.repay-badge.is-off {
+  color: #666;
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.repay-badge.is-overdue {
+  color: #b42318;
+  background: rgba(217, 45, 32, 0.12);
+}
+
+.repay-badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.repay-loan-amt {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--green-dark);
+}
+
+.repay-loan-due {
+  font-size: 13px;
+  color: #777;
+}
+
+.repay-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px 20px;
+  text-align: center;
+  background: var(--bg-cream);
+  border: 1px dashed rgba(0, 0, 0, 0.14);
+  border-radius: var(--radius-sm);
+}
+
+.repay-empty strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.repay-empty span {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+}
+
+.repay-secure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 16px;
+  font-size: 12.5px;
+  color: #888;
+}
+
+.repay-secure svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .repay-widget {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .repay-widget {
+    padding: 24px 20px;
+  }
+
+  .repay-loan-amt {
+    font-size: 20px;
+  }
+}
