@@ -263,15 +263,13 @@ if (repayWidget) {
       // Log the link id so a failed Easebuzz page can be traced back to a payment.
       console.log('[repay] payment link', res.data.link_id, url);
 
-      // Easebuzz occasionally serves "Could Not Load Payment Page" when a link is
-      // opened the instant it is created, so give it a moment and always leave a
-      // clickable link in case the automatic redirect lands badly.
+      // Easebuzz serves "Could Not Load Payment Page" for links opened by a script
+      // right after creation, so hand the customer a real link to click instead.
       payReady.querySelector('.repay-ready-amt').textContent = inr(loan.amount);
       const link = payReady.querySelector('.repay-ready-link');
       link.href = url;
       loansStep.hidden = true;
       payReady.hidden = false;
-      setTimeout(() => { window.location.href = url; }, 1200);
       return;
     } catch (err) {
       showMsg(payError, err.message);
